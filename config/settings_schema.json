@@ -87,6 +87,112 @@
     ]
   },
   {
+    "name": "Primary buttons",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "range",
+        "id": "buttons_font_scaling",
+        "min": 50,
+        "max": 200,
+        "step": 10,
+        "unit": "%",
+        "label": "Font size",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "buttons_padding",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Borders"
+      },
+      {
+        "type": "range",
+        "id": "buttons_border_width",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "Border width",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "buttons_border_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Border opacity",
+        "default": 50
+      },
+
+      {
+        "type": "range",
+        "id": "buttons_radius",
+        "min": 0,
+        "max": 30,
+        "step": 3,
+        "unit": "px",
+        "label": "Corner radius",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Shadow"
+      },
+      {
+        "type": "range",
+        "id": "buttons_shadow_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Shadow opacity",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "buttons_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "buttons_background_color",
+        "label": "Background color",
+        "default": "#555555"
+      },
+      {
+        "type": "color",
+        "id": "buttons_border_color",
+        "label": "Border color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "buttons_shadow_color",
+        "label": "Shadow color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {

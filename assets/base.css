@@ -1176,18 +1176,20 @@ deferred-media {
   align-items: center;
   box-sizing: border-box;
   font: inherit;
-  padding: 0.9rem 3rem 1.1rem;
+  font-size: calc(1.5rem * var(--buttons-font-scaling));
+  padding: var(--buttons-padding) calc(var(--buttons-padding) * 3);
   text-decoration: none;
-  border: 0.1rem solid transparent;
-  border-radius: 0;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
-  color: rgb(var(--color-button-text));
+  border: 1px solid transparent;
+  border-radius: var(--buttons-radius);
+  background-color: rgba(var(--buttons-background-color), var(--alpha-button-background));
+  box-shadow: 0 0 0 var(--buttons-border-width) rgba(var(--buttons-border-color), var(--buttons-border-opacity));
+  color: rgb(var(--buttons-text-color));
   min-width: 12rem;
   min-height: 4.5rem;
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
+  filter: drop-shadow(-0.3rem .4rem rgba(var(--buttons-shadow-color), var(--buttons-shadow-opacity)));
 }
 
 .button:focus-visible {
@@ -1216,7 +1218,6 @@ deferred-media {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }

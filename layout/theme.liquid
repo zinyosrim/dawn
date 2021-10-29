@@ -73,6 +73,17 @@
 
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+        --buttons-padding: {{ settings.buttons_padding }}px;
+        --buttons-radius: {{ settings.buttons_radius }}px;
+        --buttons-border-width: {{ settings.buttons_border_width }}px;
+        --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
+        --buttons-font-scaling: {{ settings.buttons_font_scaling | divided_by: 100.0 }};
+        --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
+        --buttons-text-color: {{ settings.buttons_text_color.red }}, {{ settings.buttons_text_color.green }}, {{ settings.buttons_text_color.blue }};
+        --buttons-background-color: {{ settings.buttons_background_color.red }}, {{ settings.buttons_background_color.green }}, {{ settings.buttons_background_color.blue }};
+        --buttons-border-color: {{ settings.buttons_border_color.red }}, {{ settings.buttons_border_color.green }}, {{ settings.buttons_border_color.blue }};
+        --buttons-shadow-color: {{ settings.buttons_shadow_color.red }}, {{ settings.buttons_shadow_color.green }}, {{ settings.buttons_shadow_color.blue }};
       }
 
       *,
