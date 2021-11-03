@@ -87,21 +87,25 @@
     ]
   },
   {
-    "name": "Primary buttons",
+    "name": "Buttons",
     "settings": [
       {
         "type": "header",
-        "content": "General"
+        "content": "Typography"
       },
       {
         "type": "range",
         "id": "buttons_font_scaling",
-        "min": 50,
-        "max": 200,
-        "step": 10,
+        "min": 100,
+        "max": 150,
+        "step": 5,
         "unit": "%",
         "label": "Font size",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
       },
       {
         "type": "range",
@@ -119,16 +123,6 @@
       },
       {
         "type": "range",
-        "id": "buttons_border_width",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "unit": "px",
-        "label": "Border width",
-        "default": 1
-      },
-      {
-        "type": "range",
         "id": "buttons_border_opacity",
         "min": 0,
         "max": 100,
@@ -137,7 +131,16 @@
         "label": "Border opacity",
         "default": 50
       },
-
+      {
+        "type": "range",
+        "id": "buttons_border_width",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "Border width",
+        "default": 1
+      },
       {
         "type": "range",
         "id": "buttons_radius",
@@ -159,12 +162,42 @@
         "max": 100,
         "step": 5,
         "unit": "%",
-        "label": "Shadow opacity",
+        "label": "Opacity",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "buttons_shadow_horizontal_offset",
+        "min": -20,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Horizontal offset",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "buttons_shadow_vertical_offset",
+        "min": -20,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Vertical offset",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "buttons_shadow_blur_radius",
+        "min": 0,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Blur radius",
         "default": 0
       },
       {
         "type": "header",
-        "content": "Colors"
+        "content": "Primary button colors"
       },
       {
         "type": "color",
@@ -187,6 +220,201 @@
       {
         "type": "color",
         "id": "buttons_shadow_color",
+        "label": "Shadow color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Secondary button colors"
+      },
+      {
+        "type": "color",
+        "id": "secondary_buttons_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "secondary_buttons_background_color",
+        "label": "Background color",
+        "default": "#555555"
+      },
+      {
+        "type": "color",
+        "id": "secondary_buttons_border_color",
+        "label": "Border color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "secondary_buttons_shadow_color",
+        "label": "Shadow color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Tertiary button colors"
+      },
+      {
+        "type": "color",
+        "id": "tertiary_buttons_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "tertiary_buttons_background_color",
+        "label": "Background color",
+        "default": "#555555"
+      },
+      {
+        "type": "color",
+        "id": "tertiary_buttons_border_color",
+        "label": "Border color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "tertiary_buttons_shadow_color",
+        "label": "Shadow color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Dropdowns & inputs",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Typography"
+      },
+      {
+        "type": "range",
+        "id": "inputs_font_scaling",
+        "min": 100,
+        "max": 150,
+        "step": 5,
+        "unit": "%",
+        "label": "Font size",
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "range",
+        "id": "inputs_padding",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Borders"
+      },
+      {
+        "type": "range",
+        "id": "inputs_border_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Border opacity",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "inputs_border_width",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "unit": "px",
+        "label": "Border width",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "inputs_radius",
+        "min": 0,
+        "max": 30,
+        "step": 3,
+        "unit": "px",
+        "label": "Corner radius",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Shadow"
+      },
+      {
+        "type": "range",
+        "id": "inputs_shadow_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Opacity",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "inputs_shadow_horizontal_offset",
+        "min": -20,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Horizontal offset",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "inputs_shadow_vertical_offset",
+        "min": -20,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Vertical offset",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "inputs_shadow_blur_radius",
+        "min": 0,
+        "max": 20,
+        "step": 2,
+        "unit": "px",
+        "label": "Blur radius",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "inputs_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "inputs_background_color",
+        "label": "Background color",
+        "default": "#555555"
+      },
+      {
+        "type": "color",
+        "id": "inputs_border_color",
+        "label": "Border color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "inputs_shadow_color",
         "label": "Shadow color",
         "default": "#000000"
       }
@@ -236,6 +464,41 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      }
+    ]
+  },
+  {
+    "name": "Dividers & lines",
+    "settings": [
+      {
+        "type": "range",
+        "id": "dividers_width",
+        "min": 0,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "label": "Width",
+        "default": 1
+      },
+      {
+        "type": "range",
+        "id": "dividers_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Opacity",
+        "default": 50
+      },
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "dividers_color",
+        "label": "Color",
+        "default": "#000000"
       }
     ]
   },

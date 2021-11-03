@@ -1,5 +1,5 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: var(--dividers-width) solid rgba(var(--dividers-color), var(--dividers-opacity));
 }
 
 .footer:not(.color-background-1) {
@@ -48,7 +48,7 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+  border-top: solid var(--dividers-width) rgba(var(--color-foreground), var(--dividers-opacity));
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -211,12 +211,6 @@
 @media screen and (min-width: 750px) {
   .footer-block__newsletter + .footer__list-social {
     margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .footer__content-bottom {
-    border-top-width: 0.1rem;
   }
 }
 
