@@ -11,7 +11,7 @@ if (!customElements.get('pickup-availability')) {
     }
 
     fetchAvailability(variantId) {
-      const variantSectionUrl = `${this.dataset.baseUrl}variants/${variantId}/?section_id=pickup-availability`;
+      const variantSectionUrl = `//${window.location.host}/${this.dataset.rootUrl}/variants/${variantId}/?section_id=pickup-availability`;
 
       fetch(variantSectionUrl)
         .then(response => response.text())
