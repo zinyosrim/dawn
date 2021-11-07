@@ -1,0 +1,126 @@
+{% comment %}My first dawn section {% endcomment %}
+
+{% stylesheet %}
+.dc-video-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.dc-video-description-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: yellow;
+  width: 100%;
+}
+
+.dc-video-description-content > * {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.dc-video-description-content > p {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+@media (max-width: 660px) {
+  .dc-video-row {
+    flex-direction: column;
+  } 
+  .dc-text-content {
+    padding: 10%;
+    width: 1vw;
+  }
+}
+{% endstylesheet %}
+
+<div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} color-scheme-{{ section.settings.color_scheme }}">
+
+
+<div class="custom-text-section">
+  <h2> {{ section.settings.dc_video_title }} </h2>
+  <div>{{ section.settings.dc_video_description }}</div>
+</div>
+
+<div class="dc-video-row">
+  <div class="dc-video-content">
+    <iframe 
+            src='https://player.vimeo.com/video/436703027' 
+            frameborder='0' 
+            webkitAllowFullScreen mozallowfullscreen allowFullScreen>         
+    </iframe>
+  </div>
+  <div class="dc-video-description-content">
+    <h2 class="dc-video-title">
+      {{ section.settings.dc_video_title }}
+    </h2>
+    <p class="dc-video-description">
+     {{ section.settings.dc_video_description }}
+    </p>
+    <form action="https://google.com">
+      <input type="submit" value="CTA" />
+    </form>
+  </div>
+</div>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+{% javascript %}
+const iframe = document.querySelector('iframe');
+const player = new Vimeo.Player(iframe);
+
+Promise.all([player.getVideoWidth(), player.getVideoHeight()]).then(function(dimensions) {
+
+  let aspectRatio = dimensions[1]/dimensions[0];
+  
+  const videoBox = document.querySelector(".dc-video-content");
+  const newVideoWidth = document.querySelector(".dc-video-row").offsetWidth/3
+  videoBox.style.width =  newVideoWidth + "px";
+  videoBox.style.height = newVideoWidth * aspectRatio + "px";
+
+  iframe.width = newVideoWidth
+  iframe.height = newVideoWidth * aspectRatio;
+});
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Vimeo Video with Text",
+    "settings": [
+      {
+        "id": "dc_video_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "dc_video_description",
+        "type": "richtext",
+        "label": "Add custom text below",
+        "default": "<p>Add your text here</p>"
+      },
+      {
+        "id": "dc_video_vimeo_url",
+        "type": "text",
+        "label": "Add Vimeo link",
+        "default": "Vimeo-Link"
+      },
+      {
+        "id": "dc_video_cta_target",
+        "type": "url",
+        "label": "Button Link",
+      },
+    ],
+    "presets": [
+      {
+        "name": "custom-text",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
